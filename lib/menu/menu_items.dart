@@ -28,9 +28,41 @@ const appMenuItems = <MenuItems>[
     icon: Icons.card_membership,
   ),
   MenuItems(
-    title: 'Profile',
-    subtitle: 'Go to profile screen',
-    url: '/profile',
-    icon: Icons.person,
+    title: 'Pogress indicator',
+    subtitle: 'Generales y controles',
+    url: '/progress',
+    icon: Icons.refresh_rounded,
+  ),
+
+  MenuItems(
+    title: 'Snackbars y Diálogos',
+    subtitle: 'Indicadores en Pantallas',
+    url: '/snackbars',
+    icon: Icons.info_outline_rounded,
+  ),
+
+  MenuItems(
+    title: 'Animated Container',
+    subtitle: 'Stateful Widget ',
+    url: '/animated',
+    icon: Icons.check_box_outline_blank_rounded,
+  ),
+   MenuItems(
+    title: 'Introduccion a la aplicacion',
+    subtitle: 'Tutorial Introductorio ',
+    url: '/tutorial',
+    icon: Icons.check_box_outline_blank_rounded,
+  ),
+  MenuItems(
+    title: 'Cambiar tema',
+    subtitle: 'Cambiar el tema de la aplicacion',
+    url: '/theme-changer',
+    icon: Icons.color_lens_outlined,
+  ),
+  MenuItems(
+    title: 'Riverpod Counter',
+    subtitle: 'Introduccion a Riverpod',
+    url: '/counter-riverpod',
+    icon: Icons.color_lens_outlined,
   ),
 ];
