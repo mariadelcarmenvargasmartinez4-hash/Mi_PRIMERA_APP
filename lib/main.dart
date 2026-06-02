@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
-//import 'presentation/screens/home/home_screen.dart';
-import 'confing/theme/app_theme.dart';
-import 'package:mi_primera_app/confing/router/app_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'confing/router/app_router.dart';
+import 'presentation/provider/theme_provider.dart';
+
 void main() {
-  runApp(const MyApp());
+
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
+
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+
+    final appTheme = ref.watch(themeNotifierProvider);
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      //home: const HomeScreen(),
-      theme: AppTheme(selectColor: 0).getTheme(),
+      theme: appTheme.getTheme(),
       routerConfig: appRouter,
     );
   }

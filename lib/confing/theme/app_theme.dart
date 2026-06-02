@@ -27,4 +27,11 @@ class AppTheme {
         colorSchemeSeed: colorList[selectColor],
         useMaterial3: true,
       );
+      AppTheme copyWith({
+        int? selectColor,
+      }) {
+        return AppTheme(
+          selectColor: selectColor ?? this.selectColor,
+        );
+        
 }
