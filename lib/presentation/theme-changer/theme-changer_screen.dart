@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:mi_primera_app/confing/theme/app_theme.dart';
-import 'package:mi_primera_app/presentation/provider/theme_provider.dart';
+import 'package:mi_primera_app/presentation/provaider/theme_provaider.dart';
 
 class ThemeChangerScreen extends ConsumerWidget {
   static const String name = 'theme-changer-screen';
